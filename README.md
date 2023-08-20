@@ -298,3 +298,27 @@ mientras permite a las subclases alterar el tipo de objetos que se crearán.
 Ejemplo de **Refactoring.guru:**
 
 ![factory-method-3.png](./assets/factory-method-3.png)
+
+La finalidad del patrón Factory Method es proporcionar una manera de crear objetos de diferentes tipos sin tener que
+conocer los detalles específicos de su creación. Aunque puede parecer que se están agregando más clases, en realidad
+este enfoque tiene varios beneficios:
+
+1. **Desacoplamiento:** El Factory Method permite separar la creación de objetos de su uso. Esto significa que el
+   cliente (quien necesita los objetos) no necesita conocer los detalles concretos de cómo se crean los objetos. Si en
+   el futuro cambias la forma en que se crean los objetos, el cliente no se verá afectado siempre y cuando mantengas la
+   misma interfaz.
+
+2. **Abstracción:** Al trabajar con interfaces y clases abstractas para la creación y los productos, puedes proporcionar
+   una capa de abstracción que facilita la expansión y mantenimiento del sistema. Puedes agregar nuevos tipos de
+   productos y creadores sin afectar el código existente.
+
+3. **Reusabilidad:** Al tener creadores separados para diferentes tipos de objetos, puedes reutilizar la lógica de
+   creación en varios lugares dentro de tu aplicación. Si necesitas crear objetos similares en diferentes partes del
+   sistema, puedes utilizar los mismos creadores.
+
+4. **Flexibilidad:** El Factory Method te permite crear jerarquías de productos y creadores. Esto es especialmente útil
+   cuando tienes productos relacionados que deben ser creados de manera coherente, pero también con variaciones en su
+   implementación.
+
+5. **Extensibilidad:** Si en el futuro necesitas agregar nuevos tipos de productos, puedes hacerlo creando una nueva
+   clase concreta de producto y un correspondiente creador. Esto evita la necesidad de modificar el código existente.
