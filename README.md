@@ -284,4 +284,17 @@ public class SaveDataCommand extends BaseCommand {
 
 ---
 
+## Factory Method
 
+Define una interfaz para crear un objeto, pero deja que las subclases decidan qué clase instanciar.
+
+![factory-method-1](./assets/factory-method-1.png)
+
+Factory Method es un patrón de diseño creacional que proporciona una interfaz para crear objetos en una superclase,
+mientras permite a las subclases alterar el tipo de objetos que se crearán.
+
+![factory-method-2](./assets/factory-method-2.png)
+
+Ejemplo de **Refactoring.guru:**
+
+![factory-method-3.png](./assets/factory-method-3.png)
