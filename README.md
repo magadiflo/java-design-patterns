@@ -388,3 +388,13 @@ El patrón Adapter finge ser una pieza redonda con un radio igual a la mitad del
 palabras, el radio del círculo más pequeño en el que quepa la pieza cuadrada).
 
 ![adapter-3](./assets/adapter-3.png)
+
+### Ejemplo de Arquitectura Java
+
+El patrón adaptador se encargará de construir una clase que adapte la funcionalidad de la clase LamparaInglesa de
+tal forma que se pueda usar dentro de nuestra estructura de conectables.
+
+El uso de Java Adapter pattern nos puede ayudar a solventar muchas situaciones de programación compleja en donde tenemos
+que integrar código de distintos desarrolladores.
+
+![adapter-4](./assets/adapter-4.png)
