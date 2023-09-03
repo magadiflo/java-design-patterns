@@ -284,6 +284,16 @@ public class SaveDataCommand extends BaseCommand {
 
 ---
 
+# Patrones creacionales
+
+- Proporcionan varios **mecanismos de creación de objetos** que incrementan la flexibilidad y la reutilización del
+  código existente.
+- **Definen cómo puede crearse un objeto. Habitualmente esto incluye aislar los detalles de la creación del objeto**, de
+  forma que su código no dependa de los tipos de objeto que hay y, por lo tanto, no deba ser modificado al añadir un
+  nuevo tipo de objeto.
+
+---
+
 ## Factory Method
 
 Define una interfaz para crear un objeto, pero deja que las subclases decidan qué clase instanciar.
@@ -322,3 +332,69 @@ este enfoque tiene varios beneficios:
 
 5. **Extensibilidad:** Si en el futuro necesitas agregar nuevos tipos de productos, puedes hacerlo creando una nueva
    clase concreta de producto y un correspondiente creador. Esto evita la necesidad de modificar el código existente.
+
+---
+
+# Patrones estructurales
+
+- Explican **cómo ensamblar objetos y clases en estructuras más grandes**, a la vez que se mantiene la flexibilidad y
+  eficiencia de esas estructuras.
+- Tratan la manera en que los objetos se conectan con otros objetos, para asegurar que los cambios del sistema no
+  requieren cambiar esas conexiones.
+- Determinar cómo las clases y objetos se combinan para formar estructuras. Estas estructuras permitirán que se agreguen
+  nuevas funcionalidades.
+- Se centran en la composición de las clases y la forma en que se relacionan entre sí para formar estructuras más
+  complejas. Los patrones de diseño estructural ayudan a lograr una mayor flexibilidad, reutilización y mantenibilidad
+  del código.
+
+---
+
+## Adapter
+
+- Permite la colaboración entre objetos con interfaces incompatibles.
+- Convierte la interfaz de una clase en otra interfaz que los clientes esperan.
+- El patrón de diseño Adapter es utilizado cuando tenemos interfaces de software incompatibles, las cuales a pesar de su
+  incompatibilidad tiene una funcionalidad similar. Este patrón es implementado cuando se desea homogeneizar la forma de
+  trabajar con estas interfaces incompatibles, para lo cual se crea una clase intermedia que funciona como un adaptador.
+  Esta clase adaptador proporcionará los métodos para interactuar con la interface incompatible.
+
+Estructura del **patrón Adapter:**
+
+![adapter-1](./assets/adapter-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+1. La clase `Cliente` contiene la lógica de negocio existente del programa.
+2. La `Interfaz con el Cliente` describe un protocolo que otras clases deben seguir para poder colaborar con el código
+   cliente.
+3. `Servicio` es alguna clase útil (normalmente de una tercera parte o heredada). El cliente no puede utilizar
+   directamente esta clase porque tiene una interfaz incompatible.
+4. La clase `Adaptadora` es capaz de trabajar tanto con la clase cliente como con la clase de servicio: implementa la
+   interfaz con el cliente, mientras envuelve el objeto de la clase de servicio. La clase adaptadora recibe llamadas del
+   cliente a través de la interfaz adaptadora y las traduce en llamadas al objeto envuelto de la clase de servicio, pero
+   en un formato que pueda comprender.
+5. El código cliente no se acopla a la clase adaptadora concreta siempre y cuando funcione con la clase adaptadora a
+   través de la interfaz con el cliente. Gracias a esto, puedes introducir nuevos tipos de adaptadores en el programa
+   sin descomponer el código cliente existente. Esto puede resultar útil cuando la interfaz de la clase de servicio se
+   cambia o sustituye, ya que puedes crear una nueva clase adaptadora sin cambiar el código cliente.
+
+![adapter-2](./assets/adapter-2.png)
+
+### Ejemplo de Refactoring Guru
+
+Este ejemplo del patrón `Adapter` se basa en el clásico conflicto entre piezas cuadradas y agujeros redondos.
+
+El patrón Adapter finge ser una pieza redonda con un radio igual a la mitad del diámetro del cuadrado (en otras
+palabras, el radio del círculo más pequeño en el que quepa la pieza cuadrada).
+
+![adapter-3](./assets/adapter-3.png)
+
+### Ejemplo de Arquitectura Java
+
+El patrón adaptador se encargará de construir una clase que adapte la funcionalidad de la clase LamparaInglesa de
+tal forma que se pueda usar dentro de nuestra estructura de conectables.
+
+El uso de Java Adapter pattern nos puede ayudar a solventar muchas situaciones de programación compleja en donde tenemos
+que integrar código de distintos desarrolladores.
+
+![adapter-4](./assets/adapter-4.png)
