@@ -332,3 +332,19 @@ este enfoque tiene varios beneficios:
 
 5. **Extensibilidad:** Si en el futuro necesitas agregar nuevos tipos de productos, puedes hacerlo creando una nueva
    clase concreta de producto y un correspondiente creador. Esto evita la necesidad de modificar el código existente.
+
+---
+
+# Patrones estructurales
+
+- Explican **cómo ensamblar objetos y clases en estructuras más grandes**, a la vez que se mantiene la flexibilidad y
+  eficiencia de esas estructuras.
+- Tratan la manera en que los objetos se conectan con otros objetos, para asegurar que los cambios del sistema no
+  requieren cambiar esas conexiones.
+- Determinar cómo las clases y objetos se combinan para formar estructuras. Estas estructuras permitirán que se agreguen
+  nuevas funcionalidades.
+- Se centran en la composición de las clases y la forma en que se relacionan entre sí para formar estructuras más
+  complejas. Los patrones de diseño estructural ayudan a lograr una mayor flexibilidad, reutilización y mantenibilidad
+  del código.
+
+---
