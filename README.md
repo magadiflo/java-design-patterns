@@ -284,6 +284,16 @@ public class SaveDataCommand extends BaseCommand {
 
 ---
 
+# Patrones creacionales
+
+- Proporcionan varios **mecanismos de creación de objetos** que incrementan la flexibilidad y la reutilización del
+  código existente.
+- **Definen cómo puede crearse un objeto. Habitualmente esto incluye aislar los detalles de la creación del objeto**, de
+  forma que su código no dependa de los tipos de objeto que hay y, por lo tanto, no deba ser modificado al añadir un
+  nuevo tipo de objeto.
+
+---
+
 ## Factory Method
 
 Define una interfaz para crear un objeto, pero deja que las subclases decidan qué clase instanciar.
