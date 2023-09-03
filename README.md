@@ -358,7 +358,7 @@ este enfoque tiene varios beneficios:
   trabajar con estas interfaces incompatibles, para lo cual se crea una clase intermedia que funciona como un adaptador.
   Esta clase adaptador proporcionará los métodos para interactuar con la interface incompatible.
 
-Estructura del **patrón Adapter:** 
+Estructura del **patrón Adapter:**
 
 ![adapter-1](./assets/adapter-1.png)
 
@@ -380,3 +380,11 @@ Aquí se muestra la estructura más detallada:
 
 ![adapter-2](./assets/adapter-2.png)
 
+### Ejemplo de Refactoring Guru
+
+Este ejemplo del patrón `Adapter` se basa en el clásico conflicto entre piezas cuadradas y agujeros redondos.
+
+El patrón Adapter finge ser una pieza redonda con un radio igual a la mitad del diámetro del cuadrado (en otras
+palabras, el radio del círculo más pequeño en el que quepa la pieza cuadrada).
+
+![adapter-3](./assets/adapter-3.png)
