@@ -348,3 +348,35 @@ este enfoque tiene varios beneficios:
   del código.
 
 ---
+
+## Adapter
+
+- Permite la colaboración entre objetos con interfaces incompatibles.
+- Convierte la interfaz de una clase en otra interfaz que los clientes esperan.
+- El patrón de diseño Adapter es utilizado cuando tenemos interfaces de software incompatibles, las cuales a pesar de su
+  incompatibilidad tiene una funcionalidad similar. Este patrón es implementado cuando se desea homogeneizar la forma de
+  trabajar con estas interfaces incompatibles, para lo cual se crea una clase intermedia que funciona como un adaptador.
+  Esta clase adaptador proporcionará los métodos para interactuar con la interface incompatible.
+
+Estructura del **patrón Adapter:** 
+
+![adapter-1](./assets/adapter-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+1. La clase `Cliente` contiene la lógica de negocio existente del programa.
+2. La `Interfaz con el Cliente` describe un protocolo que otras clases deben seguir para poder colaborar con el código
+   cliente.
+3. `Servicio` es alguna clase útil (normalmente de una tercera parte o heredada). El cliente no puede utilizar
+   directamente esta clase porque tiene una interfaz incompatible.
+4. La clase `Adaptadora` es capaz de trabajar tanto con la clase cliente como con la clase de servicio: implementa la
+   interfaz con el cliente, mientras envuelve el objeto de la clase de servicio. La clase adaptadora recibe llamadas del
+   cliente a través de la interfaz adaptadora y las traduce en llamadas al objeto envuelto de la clase de servicio, pero
+   en un formato que pueda comprender.
+5. El código cliente no se acopla a la clase adaptadora concreta siempre y cuando funcione con la clase adaptadora a
+   través de la interfaz con el cliente. Gracias a esto, puedes introducir nuevos tipos de adaptadores en el programa
+   sin descomponer el código cliente existente. Esto puede resultar útil cuando la interfaz de la clase de servicio se
+   cambia o sustituye, ya que puedes crear una nueva clase adaptadora sin cambiar el código cliente.
+
+![adapter-2](./assets/adapter-2.png)
+
