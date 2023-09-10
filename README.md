@@ -455,6 +455,31 @@ pago, proporcionando campos adecuados para el registro de los datos del pago.
 
 > Utiliza el patrón **Strategy** cuando quieras utilizar **distintas variantes de un algoritmo** dentro de un objeto y
 > poder cambiar de un algoritmo a otro durante **el tiempo de ejecución.**
-> 
+>
 > Utiliza el patrón **Strategy** cuando tengas muchas **clases similares** que solo **se diferencien** en la forma en
 > que **ejecutan cierto comportamiento.**
+
+### [Ejemplo de DigitalOcean: "Medios de pago"](https://www.digitalocean.com/community/tutorials/strategy-design-pattern-in-java-example-tutorial)
+
+El patrón estratégico también se conoce como patrón político. Definimos múltiples algoritmos y dejamos que la aplicación
+cliente pase el algoritmo para usarlo como parámetro. Para nuestro ejemplo, **intentaremos implementar un carrito de
+compras simple donde tenemos dos estrategias de pago: usar tarjeta de crédito o PayPal. En primer lugar, crearemos la
+interfaz para nuestro ejemplo de patrón de estrategia, en nuestro caso para pagar la cantidad pasada como argumento.**
+
+Será una implementación similar a la que hicimos en el ejemplo de **Refactoring Guru**, pero en este caso mostraremos
+su diagrama de clases:
+
+![strategy](./assets/strategy-3.png)
+
+**NOTA**
+
+> Tenga en cuenta que el **método de pago del carrito de compras requiere un algoritmo de pago** `como argumento` y `no
+> lo almacena en ningún lugar como variable de instancia.`
+>
+> Podríamos haber usado la composición para crear `variables de instancia` para estrategias, pero `deberíamos evitarlo`
+> ya que queremos que la estrategia específica se aplique a una tarea particular.
+>
+> El patrón de estrategia es muy similar al patrón de estado. Una de las diferencias es que el contexto contiene el
+> estado como variable de instancia y puede haber múltiples tareas cuya implementación puede depender del estado,
+> mientras que `en el patrón de estrategia la estrategia se pasa como argumento al método y el objeto de contexto 
+> no tiene ninguna variable para almacenarlo.`
