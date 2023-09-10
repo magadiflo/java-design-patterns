@@ -442,3 +442,19 @@ Aquí se muestra la estructura más detallada:
    modificador `set()` que permite a los clientes sustituir la estrategia asociada al contexto durante el tiempo de
    ejecución.
 
+### Ejemplo de Refactoring Guru: "Medios de pago en una aplicación de comercio electrónico"
+
+En este ejemplo, el patrón Strategy se utiliza para implementar los distintos medios de pago de una aplicación de
+comercio electrónico. Una vez seleccionado el producto a comprar, un cliente elige un medio de pago: Paypal o tarjeta de
+crédito.
+
+Las estrategias concretas no solo realizan el propio pago, sino que además alteran el comportamiento del formulario de
+pago, proporcionando campos adecuados para el registro de los datos del pago.
+
+**Aplicabilidad**
+
+> Utiliza el patrón **Strategy** cuando quieras utilizar **distintas variantes de un algoritmo** dentro de un objeto y
+> poder cambiar de un algoritmo a otro durante **el tiempo de ejecución.**
+> 
+> Utiliza el patrón **Strategy** cuando tengas muchas **clases similares** que solo **se diferencien** en la forma en
+> que **ejecutan cierto comportamiento.**
