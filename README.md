@@ -398,3 +398,47 @@ El uso de Java Adapter pattern nos puede ayudar a solventar muchas situaciones d
 que integrar código de distintos desarrolladores.
 
 ![adapter-4](./assets/adapter-4.png)
+
+---
+
+# Patrones de comportamiento
+
+- Tratan con algoritmos y la asignación de responsabilidades entre los objetos.
+- Tratan a los objetos que manejan tipos particulares de acciones dentro de un programa. Estos encapsulan procesos debe
+  ejecutarse dentro de la funcionalidad de la aplicación, como interpretar un lenguaje, completar una petición, moverse
+  a través de una secuencia o implementar un algoritmo.
+- El patrón de comportamiento se ocupa de la comunicación entre objetos de clase.
+- Definen las **interacciones y responsabilidades de los objetos.**
+- Se utilizan para definir **cómo los objetos interactúan y se comunican entre sí.** Abordan la asignación de
+  responsabilidades y flujos de control.
+
+---
+
+## Strategy
+
+- Encapsula algoritmos intercambiables para un uso flexible basado en los requisitos del cliente.
+- Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.
+- Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos
+  intercambiables.
+- Permite a una clase cambiar su comportamiento en tiempo de ejecución. Esto se logra mediante la creación de diferentes
+  estrategias o algoritmos que pueden ser intercambiados fácilmente.
+
+Estructura del patrón **Strategy:**
+
+![patrón strategy](./assets/strategy-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+![patrón strategy](./assets/strategy-2.png)
+
+1. **La clase contexto** mantiene una referencia a una de las estrategias concretas y se comunica con este objeto
+   únicamente a través de la interfaz estrategia.
+2. **La interfaz estrategia** es común a todas las estrategias concretas. Declara un método que la clase contexto
+   utiliza para ejecutar una estrategia.
+3. **Las estrategias concretas** implementan distintas variaciones de un algoritmo que la clase contexto utiliza.
+4. **La clase contexto** invoca el método de ejecución en el objeto de estrategia vinculado cada vez que necesita
+   ejecutar el algoritmo. La clase contexto no sabe con qué tipo de estrategia funciona o cómo se ejecuta el algoritmo.
+5. **El cliente** crea un objeto de estrategia específico y lo pasa a la clase contexto. La clase contexto expone un
+   modificador `set()` que permite a los clientes sustituir la estrategia asociada al contexto durante el tiempo de
+   ejecución.
+
