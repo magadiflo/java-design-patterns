@@ -398,3 +398,98 @@ El uso de Java Adapter pattern nos puede ayudar a solventar muchas situaciones d
 que integrar código de distintos desarrolladores.
 
 ![adapter-4](./assets/adapter-4.png)
+
+---
+
+# Patrones de comportamiento
+
+- Tratan con algoritmos y la asignación de responsabilidades entre los objetos.
+- Tratan a los objetos que manejan tipos particulares de acciones dentro de un programa. Estos encapsulan procesos debe
+  ejecutarse dentro de la funcionalidad de la aplicación, como interpretar un lenguaje, completar una petición, moverse
+  a través de una secuencia o implementar un algoritmo.
+- El patrón de comportamiento se ocupa de la comunicación entre objetos de clase.
+- Definen las **interacciones y responsabilidades de los objetos.**
+- Se utilizan para definir **cómo los objetos interactúan y se comunican entre sí.** Abordan la asignación de
+  responsabilidades y flujos de control.
+
+---
+
+## Strategy
+
+- Encapsula algoritmos intercambiables para un uso flexible basado en los requisitos del cliente.
+- Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.
+- Permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos
+  intercambiables.
+- Permite a una clase cambiar su comportamiento en tiempo de ejecución. Esto se logra mediante la creación de diferentes
+  estrategias o algoritmos que pueden ser intercambiados fácilmente.
+
+Estructura del patrón **Strategy:**
+
+![patrón strategy](./assets/strategy-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+![patrón strategy](./assets/strategy-2.png)
+
+1. **La clase contexto** mantiene una referencia a una de las estrategias concretas y se comunica con este objeto
+   únicamente a través de la interfaz estrategia.
+2. **La interfaz estrategia** es común a todas las estrategias concretas. Declara un método que la clase contexto
+   utiliza para ejecutar una estrategia.
+3. **Las estrategias concretas** implementan distintas variaciones de un algoritmo que la clase contexto utiliza.
+4. **La clase contexto** invoca el método de ejecución en el objeto de estrategia vinculado cada vez que necesita
+   ejecutar el algoritmo. La clase contexto no sabe con qué tipo de estrategia funciona o cómo se ejecuta el algoritmo.
+5. **El cliente** crea un objeto de estrategia específico y lo pasa a la clase contexto. La clase contexto expone un
+   modificador `set()` que permite a los clientes sustituir la estrategia asociada al contexto durante el tiempo de
+   ejecución.
+
+### Ejemplo de Refactoring Guru: "Medios de pago en una aplicación de comercio electrónico"
+
+En este ejemplo, el patrón Strategy se utiliza para implementar los distintos medios de pago de una aplicación de
+comercio electrónico. Una vez seleccionado el producto a comprar, un cliente elige un medio de pago: Paypal o tarjeta de
+crédito.
+
+Las estrategias concretas no solo realizan el propio pago, sino que además alteran el comportamiento del formulario de
+pago, proporcionando campos adecuados para el registro de los datos del pago.
+
+**Aplicabilidad**
+
+> Utiliza el patrón **Strategy** cuando quieras utilizar **distintas variantes de un algoritmo** dentro de un objeto y
+> poder cambiar de un algoritmo a otro durante **el tiempo de ejecución.**
+>
+> Utiliza el patrón **Strategy** cuando tengas muchas **clases similares** que solo **se diferencien** en la forma en
+> que **ejecutan cierto comportamiento.**
+
+### [Ejemplo de DigitalOcean: "Medios de pago"](https://www.digitalocean.com/community/tutorials/strategy-design-pattern-in-java-example-tutorial)
+
+El patrón estratégico también se conoce como patrón político. Definimos múltiples algoritmos y dejamos que la aplicación
+cliente pase el algoritmo para usarlo como parámetro. Para nuestro ejemplo, **intentaremos implementar un carrito de
+compras simple donde tenemos dos estrategias de pago: usar tarjeta de crédito o PayPal. En primer lugar, crearemos la
+interfaz para nuestro ejemplo de patrón de estrategia, en nuestro caso para pagar la cantidad pasada como argumento.**
+
+Será una implementación similar a la que hicimos en el ejemplo de **Refactoring Guru**, pero en este caso mostraremos
+su diagrama de clases:
+
+![strategy](./assets/strategy-3.png)
+
+**NOTA**
+
+> Tenga en cuenta que el **método de pago del carrito de compras requiere un algoritmo de pago** `como argumento` y `no
+> lo almacena en ningún lugar como variable de instancia.`
+>
+> Podríamos haber usado la composición para crear `variables de instancia` para estrategias, pero `deberíamos evitarlo`
+> ya que queremos que la estrategia específica se aplique a una tarea particular.
+>
+> El patrón de estrategia es muy similar al patrón de estado. Una de las diferencias es que el contexto contiene el
+> estado como variable de instancia y puede haber múltiples tareas cuya implementación puede depender del estado,
+> mientras que `en el patrón de estrategia la estrategia se pasa como argumento al método y el objeto de contexto
+> no tiene ninguna variable para almacenarlo.`
+
+### [Ejemplo de DZone: "Formatos de compresión de archivos"](https://dzone.com/articles/design-patterns-strategy)
+
+El patrón Estrategia `se debe utilizar donde desee elegir el algoritmo que se utilizará en tiempo de ejecución`. Un buen
+uso del patrón Estrategia sería **guardar archivos en diferentes formatos, ejecutar varios algoritmos de clasificación
+o compresión de archivos.**
+
+El patrón Estrategia `proporciona una forma de definir una familia de algoritmos`, encapsular cada uno como un objeto y
+hacerlos intercambiables.
+
