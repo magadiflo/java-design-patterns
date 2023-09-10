@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.behavioral.digitalocean.context;
+package magadiflo.design.patterns.behavioral.strategy.digitalocean.context;
 
 public class Item {
     private final String upcCode;

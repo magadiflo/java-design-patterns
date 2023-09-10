@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.behavioral.guru.strategies.auxiliaries;
+package magadiflo.design.patterns.behavioral.strategy.guru.strategies.auxiliaries;
 
 /**
  * Clase de tarjeta de crédito ficticia.

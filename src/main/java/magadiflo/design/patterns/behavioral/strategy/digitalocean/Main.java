@@ -1,9 +1,9 @@
-package magadiflo.design.patterns.behavioral.digitalocean;
+package magadiflo.design.patterns.behavioral.strategy.digitalocean;
 
-import magadiflo.design.patterns.behavioral.digitalocean.context.Item;
-import magadiflo.design.patterns.behavioral.digitalocean.context.ShoppingCart;
-import magadiflo.design.patterns.behavioral.digitalocean.strategy.CreditCardStrategy;
-import magadiflo.design.patterns.behavioral.digitalocean.strategy.PaypalStrategy;
+import magadiflo.design.patterns.behavioral.strategy.digitalocean.context.Item;
+import magadiflo.design.patterns.behavioral.strategy.digitalocean.context.ShoppingCart;
+import magadiflo.design.patterns.behavioral.strategy.digitalocean.strategy.CreditCardStrategy;
+import magadiflo.design.patterns.behavioral.strategy.digitalocean.strategy.PaypalStrategy;
 
 public class Main {
     public static void main(String[] args) {

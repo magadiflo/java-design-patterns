@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.behavioral.guru.strategies;
+package magadiflo.design.patterns.behavioral.strategy.guru.strategies;
 
-import magadiflo.design.patterns.behavioral.guru.strategies.auxiliaries.CreditCard;
+import magadiflo.design.patterns.behavioral.strategy.guru.strategies.auxiliaries.CreditCard;
 
 import java.io.BufferedReader;
 import java.io.IOException;

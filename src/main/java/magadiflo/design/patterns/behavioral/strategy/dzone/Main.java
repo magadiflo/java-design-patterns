@@ -1,8 +1,8 @@
-package magadiflo.design.patterns.behavioral.dzone;
+package magadiflo.design.patterns.behavioral.strategy.dzone;
 
-import magadiflo.design.patterns.behavioral.dzone.context.CompressionContext;
-import magadiflo.design.patterns.behavioral.dzone.strategy.RarCompressionStrategy;
-import magadiflo.design.patterns.behavioral.dzone.strategy.ZipCompressionStrategy;
+import magadiflo.design.patterns.behavioral.strategy.dzone.context.CompressionContext;
+import magadiflo.design.patterns.behavioral.strategy.dzone.strategy.RarCompressionStrategy;
+import magadiflo.design.patterns.behavioral.strategy.dzone.strategy.ZipCompressionStrategy;
 
 import java.util.ArrayList;
 

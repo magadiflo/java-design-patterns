@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.behavioral.dzone.context;
+package magadiflo.design.patterns.behavioral.strategy.dzone.context;
 
-import magadiflo.design.patterns.behavioral.dzone.strategy.ICompressionStrategy;
+import magadiflo.design.patterns.behavioral.strategy.dzone.strategy.ICompressionStrategy;
 
 import java.util.ArrayList;
 

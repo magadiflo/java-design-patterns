@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.behavioral.digitalocean.strategy;
+package magadiflo.design.patterns.behavioral.strategy.digitalocean.strategy;
 
 /**
  * Concrete Strategies

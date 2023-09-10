@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.behavioral.dzone.strategy;
+package magadiflo.design.patterns.behavioral.strategy.dzone.strategy;
 
 import java.util.ArrayList;
 

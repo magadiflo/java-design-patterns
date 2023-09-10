@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.behavioral.guru.order;
+package magadiflo.design.patterns.behavioral.strategy.guru.order;
 
-import magadiflo.design.patterns.behavioral.guru.strategies.IPayStrategy;
+import magadiflo.design.patterns.behavioral.strategy.guru.strategies.IPayStrategy;
 
 /**
  * Clase de orden (Contexto). No sabe el método de pago concreto (estrategia) que ha elegido el usuario.

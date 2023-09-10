@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.behavioral.digitalocean.context;
+package magadiflo.design.patterns.behavioral.strategy.digitalocean.context;
 
-import magadiflo.design.patterns.behavioral.digitalocean.strategy.IPaymentStrategy;
+import magadiflo.design.patterns.behavioral.strategy.digitalocean.strategy.IPaymentStrategy;
 
 import java.util.ArrayList;
 import java.util.List;

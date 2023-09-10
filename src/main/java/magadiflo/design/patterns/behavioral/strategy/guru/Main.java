@@ -1,9 +1,9 @@
-package magadiflo.design.patterns.behavioral.guru;
+package magadiflo.design.patterns.behavioral.strategy.guru;
 
-import magadiflo.design.patterns.behavioral.guru.order.Order;
-import magadiflo.design.patterns.behavioral.guru.strategies.IPayStrategy;
-import magadiflo.design.patterns.behavioral.guru.strategies.PayByCreditCard;
-import magadiflo.design.patterns.behavioral.guru.strategies.PayByPayPal;
+import magadiflo.design.patterns.behavioral.strategy.guru.order.Order;
+import magadiflo.design.patterns.behavioral.strategy.guru.strategies.IPayStrategy;
+import magadiflo.design.patterns.behavioral.strategy.guru.strategies.PayByCreditCard;
+import magadiflo.design.patterns.behavioral.strategy.guru.strategies.PayByPayPal;
 
 import java.io.BufferedReader;
 import java.io.IOException;

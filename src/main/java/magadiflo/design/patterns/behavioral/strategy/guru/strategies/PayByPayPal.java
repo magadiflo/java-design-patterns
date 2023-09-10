@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.behavioral.guru.strategies;
+package magadiflo.design.patterns.behavioral.strategy.guru.strategies;
 
 import java.io.BufferedReader;
 import java.io.IOException;
