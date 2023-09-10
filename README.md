@@ -481,5 +481,15 @@ su diagrama de clases:
 >
 > El patrón de estrategia es muy similar al patrón de estado. Una de las diferencias es que el contexto contiene el
 > estado como variable de instancia y puede haber múltiples tareas cuya implementación puede depender del estado,
-> mientras que `en el patrón de estrategia la estrategia se pasa como argumento al método y el objeto de contexto 
+> mientras que `en el patrón de estrategia la estrategia se pasa como argumento al método y el objeto de contexto
 > no tiene ninguna variable para almacenarlo.`
+
+### [Ejemplo de DZone: "Formatos de compresión de archivos"](https://dzone.com/articles/design-patterns-strategy)
+
+El patrón Estrategia `se debe utilizar donde desee elegir el algoritmo que se utilizará en tiempo de ejecución`. Un buen
+uso del patrón Estrategia sería **guardar archivos en diferentes formatos, ejecutar varios algoritmos de clasificación
+o compresión de archivos.**
+
+El patrón Estrategia `proporciona una forma de definir una familia de algoritmos`, encapsular cada uno como un objeto y
+hacerlos intercambiables.
+
