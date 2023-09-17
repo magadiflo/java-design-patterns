@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.creational.builder.products;
+package magadiflo.design.patterns.creational.builder.guru.products;
 
-import magadiflo.design.patterns.creational.builder.products.auxiliary.*;
+import magadiflo.design.patterns.creational.builder.guru.products.auxiliary.*;
 
 /**
  * El manual del carro es otro producto.

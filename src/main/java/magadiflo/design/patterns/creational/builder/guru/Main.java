@@ -1,10 +1,10 @@
-package magadiflo.design.patterns.creational.builder;
+package magadiflo.design.patterns.creational.builder.guru;
 
-import magadiflo.design.patterns.creational.builder.builders.CarBuilder;
-import magadiflo.design.patterns.creational.builder.builders.CarManualBuilder;
-import magadiflo.design.patterns.creational.builder.director.Director;
-import magadiflo.design.patterns.creational.builder.products.Car;
-import magadiflo.design.patterns.creational.builder.products.Manual;
+import magadiflo.design.patterns.creational.builder.guru.builders.CarBuilder;
+import magadiflo.design.patterns.creational.builder.guru.builders.CarManualBuilder;
+import magadiflo.design.patterns.creational.builder.guru.director.Director;
+import magadiflo.design.patterns.creational.builder.guru.products.Car;
+import magadiflo.design.patterns.creational.builder.guru.products.Manual;
 
 /**
  * Clase cliente, aquí todo se junta

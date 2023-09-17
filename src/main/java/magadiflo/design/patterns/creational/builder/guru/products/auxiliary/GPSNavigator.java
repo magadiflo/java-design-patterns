@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.creational.builder.products.auxiliary;
+package magadiflo.design.patterns.creational.builder.guru.products.auxiliary;
 
 public class GPSNavigator {
     private String route;

@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.creational.builder.products.auxiliary;
+package magadiflo.design.patterns.creational.builder.guru.products.auxiliary;
 
 /**
  * Solo es una característica del carro

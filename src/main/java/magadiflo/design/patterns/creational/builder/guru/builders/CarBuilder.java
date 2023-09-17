@@ -1,7 +1,7 @@
-package magadiflo.design.patterns.creational.builder.builders;
+package magadiflo.design.patterns.creational.builder.guru.builders;
 
-import magadiflo.design.patterns.creational.builder.products.Car;
-import magadiflo.design.patterns.creational.builder.products.auxiliary.*;
+import magadiflo.design.patterns.creational.builder.guru.products.Car;
+import magadiflo.design.patterns.creational.builder.guru.products.auxiliary.*;
 
 /**
  * Los constructores concretos implementan pasos definidos en la interfaz común.

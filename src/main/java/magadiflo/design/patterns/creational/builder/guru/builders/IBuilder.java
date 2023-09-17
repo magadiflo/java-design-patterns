@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.creational.builder.builders;
+package magadiflo.design.patterns.creational.builder.guru.builders;
 
-import magadiflo.design.patterns.creational.builder.products.auxiliary.*;
+import magadiflo.design.patterns.creational.builder.guru.products.auxiliary.*;
 
 /**
  * La interfaz del constructor define todas las formas posibles

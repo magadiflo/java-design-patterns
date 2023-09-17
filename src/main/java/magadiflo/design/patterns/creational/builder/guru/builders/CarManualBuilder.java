@@ -1,7 +1,7 @@
-package magadiflo.design.patterns.creational.builder.builders;
+package magadiflo.design.patterns.creational.builder.guru.builders;
 
-import magadiflo.design.patterns.creational.builder.products.Manual;
-import magadiflo.design.patterns.creational.builder.products.auxiliary.*;
+import magadiflo.design.patterns.creational.builder.guru.products.Manual;
+import magadiflo.design.patterns.creational.builder.guru.products.auxiliary.*;
 
 /**
  * A diferencia de otros patrones de creación, Builder puede construir productos no relacionados,

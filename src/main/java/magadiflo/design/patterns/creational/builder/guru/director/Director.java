@@ -1,7 +1,7 @@
-package magadiflo.design.patterns.creational.builder.director;
+package magadiflo.design.patterns.creational.builder.guru.director;
 
-import magadiflo.design.patterns.creational.builder.builders.IBuilder;
-import magadiflo.design.patterns.creational.builder.products.auxiliary.*;
+import magadiflo.design.patterns.creational.builder.guru.builders.IBuilder;
+import magadiflo.design.patterns.creational.builder.guru.products.auxiliary.*;
 
 /**
  * El director define el orden de los pasos de construcción. Funciona con un objeto constructor

@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.creational.builder.products.auxiliary;
+package magadiflo.design.patterns.creational.builder.guru.products.auxiliary;
 
-import magadiflo.design.patterns.creational.builder.products.Car;
+import magadiflo.design.patterns.creational.builder.guru.products.Car;
 
 public class TripComputer {
     private Car car;
