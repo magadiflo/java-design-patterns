@@ -305,7 +305,7 @@ mientras permite a las subclases alterar el tipo de objetos que se crearán.
 
 ![factory-method-2](./assets/factory-method-2.png)
 
-Ejemplo de **Refactoring.guru:**
+### Ejemplo de Refactoring.guru:
 
 ![factory-method-3.png](./assets/factory-method-3.png)
 
@@ -357,9 +357,13 @@ Aquí se muestra la **estructura más detallada:**
    concretos pueden crear productos que no siguen la interfaz común.
 3. Los `Productos` son objetos resultantes. Los productos construidos por distintos objetos constructores no tienen que
    pertenecer a la misma jerarquía de clase o interfaz.
-4. La clase `Directora` define el orden en el que se invocarán los pasos de construcción, po lo que puedes crear y
+4. La clase `Directora` define el orden en el que se invocarán los pasos de construcción, por lo que puedes crear y
    reutilizar configuraciones específicas de los productos.
 5. El `Cliente` debe asociar uno de los objetos constructores con la clase directora.
+
+### Ejemplo de Refactoring Guru
+
+![builder ejemplo refactoring guru](./assets/builder-3.png)
 
 ---
 
