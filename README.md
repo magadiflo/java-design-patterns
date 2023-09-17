@@ -282,6 +282,13 @@ public class SaveDataCommand extends BaseCommand {
 }
 ````
 
+### [Clase anidada](https://holub.com/uml/)
+
+[Version 2.1.5 UML] Podemos representar una clase **"interna (inner)"** cuya definición está anidada dentro de la
+definición de clase **"externa (outer)"**:
+
+![nesting, innger class](./assets/nesting-inner-class.png)
+
 ---
 
 # Patrones creacionales
