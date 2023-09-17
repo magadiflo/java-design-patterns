@@ -361,6 +361,11 @@ Aquí se muestra la **estructura más detallada:**
    reutilizar configuraciones específicas de los productos.
 5. El `Cliente` debe asociar uno de los objetos constructores con la clase directora.
 
+**NOTA**
+> **No es estrictamente necesario tener una clase directora** en el programa, ya que se pueden invocar los pasos de
+> construcción en un orden específico directamente desde el código del cliente. No obstante, la clase directora puede
+> ser un buen lugar donde colocar distintas rutinas de construcción para poder reutilizarlas a lo largo del programa.
+
 ### Ejemplo de Refactoring Guru
 
 ![builder ejemplo refactoring guru](./assets/builder-3.png)
