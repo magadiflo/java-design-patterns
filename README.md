@@ -333,6 +333,34 @@ este enfoque tiene varios beneficios:
 5. **Extensibilidad:** Si en el futuro necesitas agregar nuevos tipos de productos, puedes hacerlo creando una nueva
    clase concreta de producto y un correspondiente creador. Esto evita la necesidad de modificar el código existente.
 
+## Builder
+
+- Construye objetos complejos con opciones de representación flexibles.
+- **Separa la construcción de un objeto complejo de su representación** para que un mismo proceso de construcción pueda
+  **crear diferentes representaciones.**
+- **Permite construir objetos complejos paso a paso**. El patrón nos permite **producir distintos tipos y
+  representaciones de un objeto** empleando el mismo código de construcción.
+- La idea detrás del patrón **Builder es poder construir estructuras complejas paso a paso**. De manera que podemos
+  utilizar diferentes tipos y representaciones de un objeto haciendo uso de la misma construcción.
+
+Estructura del **patrón Builder:**
+
+![builder estructura](./assets/builder-1.png)
+
+Aquí se muestra la **estructura más detallada:**
+
+![builder detallado](./assets/builder-2.png)
+
+1. La interfaz constructora `Builder` declara pasos de construcción del producto que todos los tipos de objetos
+   constructores tienen en común.
+2. Los `Constructores concretos` ofrecen distintas implementaciones de los pasos de construcción. Los constructores
+   concretos pueden crear productos que no siguen la interfaz común.
+3. Los `Productos` son objetos resultantes. Los productos construidos por distintos objetos constructores no tienen que
+   pertenecer a la misma jerarquía de clase o interfaz.
+4. La clase `Directora` define el orden en el que se invocarán los pasos de construcción, po lo que puedes crear y
+   reutilizar configuraciones específicas de los productos.
+5. El `Cliente` debe asociar uno de los objetos constructores con la clase directora.
+
 ---
 
 # Patrones estructurales
