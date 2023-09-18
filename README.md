@@ -282,6 +282,13 @@ public class SaveDataCommand extends BaseCommand {
 }
 ````
 
+### [Clase anidada](https://holub.com/uml/)
+
+[Version 2.1.5 UML] Podemos representar una clase **"interna (inner)"** cuya definición está anidada dentro de la
+definición de clase **"externa (outer)"**:
+
+![nesting, innger class](./assets/nesting-inner-class.png)
+
 ---
 
 # Patrones creacionales
@@ -305,7 +312,7 @@ mientras permite a las subclases alterar el tipo de objetos que se crearán.
 
 ![factory-method-2](./assets/factory-method-2.png)
 
-Ejemplo de **Refactoring.guru:**
+### Ejemplo de Refactoring.guru:
 
 ![factory-method-3.png](./assets/factory-method-3.png)
 
@@ -332,6 +339,131 @@ este enfoque tiene varios beneficios:
 
 5. **Extensibilidad:** Si en el futuro necesitas agregar nuevos tipos de productos, puedes hacerlo creando una nueva
    clase concreta de producto y un correspondiente creador. Esto evita la necesidad de modificar el código existente.
+
+## Builder
+
+- Construye objetos complejos con opciones de representación flexibles.
+- **Separa la construcción de un objeto complejo de su representación** para que un mismo proceso de construcción pueda
+  **crear diferentes representaciones.**
+- **Permite construir objetos complejos paso a paso**. El patrón nos permite **producir distintos tipos y
+  representaciones de un objeto** empleando el mismo código de construcción.
+- La idea detrás del patrón **Builder es poder construir estructuras complejas paso a paso**. De manera que podemos
+  utilizar diferentes tipos y representaciones de un objeto haciendo uso de la misma construcción.
+
+Estructura del **patrón Builder:**
+
+![builder estructura](./assets/builder-1.png)
+
+Aquí se muestra la **estructura más detallada:**
+
+![builder detallado](./assets/builder-2.png)
+
+1. La interfaz constructora `Builder` declara pasos de construcción del producto que todos los tipos de objetos
+   constructores tienen en común.
+2. Los `Constructores concretos` ofrecen distintas implementaciones de los pasos de construcción. Los constructores
+   concretos pueden crear productos que no siguen la interfaz común.
+3. Los `Productos` son objetos resultantes. Los productos construidos por distintos objetos constructores no tienen que
+   pertenecer a la misma jerarquía de clase o interfaz.
+4. La clase `Directora` define el orden en el que se invocarán los pasos de construcción, por lo que puedes crear y
+   reutilizar configuraciones específicas de los productos.
+5. El `Cliente` debe asociar uno de los objetos constructores con la clase directora.
+
+**NOTA**
+> **No es estrictamente necesario tener una clase directora** en el programa, ya que se pueden invocar los pasos de
+> construcción en un orden específico directamente desde el código del cliente. No obstante, la clase directora puede
+> ser un buen lugar donde colocar distintas rutinas de construcción para poder reutilizarlas a lo largo del programa.
+
+### Ejemplo de Refactoring Guru
+
+![builder ejemplo refactoring guru](./assets/builder-3.png)
+
+### [Ejemplo de Tutoriales Java - Enfoque 1](https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java)
+
+Según la página
+de [java tutoriales](https://www.javatutoriales.com/2022/03/patron-de-diseno-builder.html#google_vignette), existen
+distintos enfoques del patrón Builder. En esta oportunidad mostramos el primer enfoque que hace referencia a la
+estrategia B de la página Java Tutoriales, pero el ejemplo se tomó de la página de **DigitalOcean**:
+
+![builder - enfoque 1](./assets/builder-4-1.png)
+
+El cliente usará la implementación del diagrama anterior de la siguiente manera:
+
+````java
+public class Main {
+    public static void main(String[] args) {
+        Computer computer = new Computer.ComputerBuilder("1TB", "16GB")
+                .graphicsCardEnabled(true)
+                .bluetoothEnabled(true)
+                .build();
+        System.out.println(computer);
+    }
+}
+// Computer{hdd='1TB', ram='16GB', isGraphicsCardEnabled=true, isBluetoothEnabled=true}
+````
+
+**NOTA**
+
+El diagrama de clases anterior fue generada usando código de **[PlantUML](https://plantuml.com/es/class-diagram)**,
+luego ejecutando el comando `java -jar plantuml.jar nombre_archivo.puml`. Previamente, debemos haber descargado el
+archivo `plantuml.jar` y creado el archivo con extensión `pu` o `puml` donde colocaremos el código de `PlantUML`.
+
+### [Ejemplo de Tutoriales Java - Enfoque 2](https://www.javatutoriales.com/2022/03/patron-de-diseno-builder.html#google_vignette)
+
+Este enfoque es similar al enfoque anterior, la diferencia es que en este enfoque ambos clases tienen sus
+`constructores privados` con la finalidad de que el cliente evite usar el `new` para la creación de objetos del tipo
+User. Otra diferencia notoria es que en este segundo enfoque usamos un **método estático** que retorna una instancia de
+la clase constructora.
+
+![builder - enfoque 2](./assets/builder-4-2.png)
+
+El cliente usará la implementación del diagrama anterior de la siguiente manera:
+
+````java
+public class Main {
+    public static void main(String[] args) {
+        User user = User.builder()
+                .name("Nophy")
+                .username("dog")
+                .password("12345")
+                .edad(4)
+                .build();
+        System.out.println(user);
+    }
+}
+//User{name='Nophy', username='dog', password='12345', edad=4}
+````
+
+Es importante volver a precisar que en este segundo enfoque **NO se podrá crear una instancia de User de esta manera**:
+
+````
+[X] User user = new User.UserBuilder()...
+````
+
+Esto es porque precisamente definimos el constructor del `UserBuilder()` como privado. Entonces, la única manera de
+crear una instancia de `UserBuilder` y con él crear la instancia de `User` **es a través del método estático de
+la clase User, el builder()**.
+
+### [Ejemplo de GustavoPeiretti](https://gustavopeiretti.com/patron-de-diseno-builder-en-java/)
+
+Este ejemplo se asemeja más al desarrollado por **refactoring.guru**:
+
+![builder](./assets/builder-5.png)
+
+El cliente que quiere crear una instancia de `BankAccount` deberá instanciar la clase constructora `BankAccountBuilder`:
+
+````java
+public class Main {
+    public static void main(String[] args) {
+        BankAccount b2 = new BankAccountBuilder(12345L)
+                .balance(1000.20)
+                .owner("Oaken")
+                .interestRate(10.5)
+                .type("PLATINIUM")
+                .build();
+        System.out.println(b2);
+    }
+}
+````
 
 ---
 
