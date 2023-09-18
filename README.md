@@ -407,6 +407,42 @@ El diagrama de clases anterior fue generada usando código de **[PlantUML](https
 luego ejecutando el comando `java -jar plantuml.jar nombre_archivo.puml`. Previamente, debemos haber descargado el
 archivo `plantuml.jar` y creado el archivo con extensión `pu` o `puml` donde colocaremos el código de `PlantUML`.
 
+### [Ejemplo de Tutoriales Java - Enfoque 2](https://www.javatutoriales.com/2022/03/patron-de-diseno-builder.html#google_vignette)
+
+Este enfoque es similar al enfoque anterior, la diferencia es que en este enfoque ambos clases tienen sus
+`constructores privados` con la finalidad de que el cliente evite usar el `new` para la creación de objetos del tipo
+User. Otra diferencia notoria es que en este segundo enfoque usamos un **método estático** que retorna una instancia de
+la clase constructora.
+
+![builder - enfoque 2](./assets/builder-4-2.png)
+
+El cliente usará la implementación del diagrama anterior de la siguiente manera:
+
+````java
+public class Main {
+    public static void main(String[] args) {
+        User user = User.builder()
+                .name("Nophy")
+                .username("dog")
+                .password("12345")
+                .edad(4)
+                .build();
+        System.out.println(user);
+    }
+}
+//User{name='Nophy', username='dog', password='12345', edad=4}
+````
+
+Es importante volver a precisar que en este segundo enfoque **NO se podrá crear una instancia de User de esta manera**:
+
+````
+User user = new User.UserBuilder()....
+````
+
+Esto es porque precisamente definimos el constructor del `UserBuilder()` como privado. Entonces, la única manera de 
+crear una instancia de `UserBuilder` y con él crear la instancia de `User` **es a través del método estático de
+la clase User, el builder()**.
+
 ---
 
 # Patrones estructurales
