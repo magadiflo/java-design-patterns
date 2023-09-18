@@ -436,12 +436,34 @@ public class Main {
 Es importante volver a precisar que en este segundo enfoque **NO se podrá crear una instancia de User de esta manera**:
 
 ````
-User user = new User.UserBuilder()....
+[X] User user = new User.UserBuilder()...
 ````
 
-Esto es porque precisamente definimos el constructor del `UserBuilder()` como privado. Entonces, la única manera de 
+Esto es porque precisamente definimos el constructor del `UserBuilder()` como privado. Entonces, la única manera de
 crear una instancia de `UserBuilder` y con él crear la instancia de `User` **es a través del método estático de
 la clase User, el builder()**.
+
+### [Ejemplo de GustavoPeiretti](https://gustavopeiretti.com/patron-de-diseno-builder-en-java/)
+
+Este ejemplo se asemeja más al desarrollado por **refactoring.guru**:
+
+![builder](./assets/builder-5.png)
+
+El cliente que quiere crear una instancia de `BankAccount` deberá instanciar la clase constructora `BankAccountBuilder`:
+
+````java
+public class Main {
+    public static void main(String[] args) {
+        BankAccount b2 = new BankAccountBuilder(12345L)
+                .balance(1000.20)
+                .owner("Oaken")
+                .interestRate(10.5)
+                .type("PLATINIUM")
+                .build();
+        System.out.println(b2);
+    }
+}
+````
 
 ---
 
