@@ -377,6 +377,36 @@ Aquí se muestra la **estructura más detallada:**
 
 ![builder ejemplo refactoring guru](./assets/builder-3.png)
 
+### [Ejemplo de Tutoriales Java - Enfoque 1](https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java)
+
+Según la página
+de [java tutoriales](https://www.javatutoriales.com/2022/03/patron-de-diseno-builder.html#google_vignette), existen
+distintos enfoques del patrón Builder. En esta oportunidad mostramos el primer enfoque que hace referencia a la
+estrategia B de la página Java Tutoriales, pero el ejemplo se tomó de la página de **DigitalOcean**:
+
+![builder - enfoque 1](./assets/builder-4-1.png)
+
+El cliente usará la implementación del diagrama anterior de la siguiente manera:
+
+````java
+public class Main {
+    public static void main(String[] args) {
+        Computer computer = new Computer.ComputerBuilder("1TB", "16GB")
+                .graphicsCardEnabled(true)
+                .bluetoothEnabled(true)
+                .build();
+        System.out.println(computer);
+    }
+}
+// Computer{hdd='1TB', ram='16GB', isGraphicsCardEnabled=true, isBluetoothEnabled=true}
+````
+
+**NOTA**
+
+El diagrama de clases anterior fue generada usando código de **[PlantUML](https://plantuml.com/es/class-diagram)**,
+luego ejecutando el comando `java -jar plantuml.jar nombre_archivo.puml`. Previamente, debemos haber descargado el
+archivo `plantuml.jar` y creado el archivo con extensión `pu` o `puml` donde colocaremos el código de `PlantUML`.
+
 ---
 
 # Patrones estructurales
