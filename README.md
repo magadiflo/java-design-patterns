@@ -531,6 +531,35 @@ que integrar código de distintos desarrolladores.
 
 ![adapter-4](./assets/adapter-4.png)
 
+## Decorator
+
+- **Añade dinámicamente un nuevo comportamiento a un objeto** en tiempo de ejecución envolviéndolo en un objeto de una
+  clase decoradora.
+- Mejora dinámicamente la funcionalidad de los objetos.
+- Añade responsabilidades adicionales a un objeto de forma dinámica.
+- Permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que
+  contienen estas funcionalidades.
+
+Estructura del patrón **Decorator**:
+
+![decorator-1.png](./assets/decorator-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+![decorator-2.png](./assets/decorator-2.png)
+
+1. **El componente** declara la interfaz común tanto para wrappers como para objetos envuetos.
+2. **Componente Concreto** es una clase de objetos envueltos. Define el comportamiento básico, que los decoradores
+   pueden alterar.
+3. La clase **Decoradora Base** tiene un campo para referenciar un objeto envuelto. El tipo del campo debe declararse
+   como la interfaz del componente para que pueda contener tanto los componentes concretos como los decoradores. La
+   clase decoradora base delega todas las operaciones al objeto envuelto.
+4. Los **Decoradores Concretos** definen funcionalidades adicionales que se pueden añadir dinámicamente a los
+   componentes. Los decoradores concretos sobreescriben métodos de la clase decoradora base y ejecutan su
+   comportamiento, ya sea antes o después de invocar al método padre.
+5. **El Cliente** puede envolver componentes en varias capas de decoradores, siempre y cuando trabajen con todos los
+   objetos a través de la interfaz del componente.
+
 ---
 
 # Patrones de comportamiento
