@@ -560,6 +560,20 @@ Aquí se muestra la estructura más detallada:
 5. **El Cliente** puede envolver componentes en varias capas de decoradores, siempre y cuando trabajen con todos los
    objetos a través de la interfaz del componente.
 
+### Ejemplo de Refactoring Guru
+
+![decorator-3.png](./assets/decorator-3.png)
+
+Este ejemplo muestra **cómo puedes ajustar el comportamiento de un objeto sin cambiar su código.**
+
+Inicialmente, la clase de la lógica de negocio solo podía leer y escribir datos en texto sin formato. Después **creamos
+varias pequeñas clases envoltorio que añaden un nuevo comportamiento** tras ejecutar operaciones estándar en un objeto
+envuelto.
+
+El **primer wrapper codifica y decodifica información**, y el **segundo comprime y descomprime datos.**
+
+Puedes incluso combinar estos wrappers envolviendo un decorador con otro.
+
 ---
 
 # Patrones de comportamiento
