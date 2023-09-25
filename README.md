@@ -574,6 +574,17 @@ El **primer wrapper codifica y decodifica información**, y el **segundo comprim
 
 Puedes incluso combinar estos wrappers envolviendo un decorador con otro.
 
+### [Ejemplo de Codejavu](http://codejavu.blogspot.com/2013/07/ejemplo-patron-de-diseno-decorator.html)
+
+**El problema**. Un restaurante de comidas rápidas ofrece 3 tipos de combos (Combo Básico, Combo Familiar, Combo
+Especial) cada combo tiene características diferentes en cuanto a cantidad, porciones, salsas entre otros, el
+restaurante también ofrece la posibilidad de aumentar el pedido mediante diferentes porciones adicionales (Tomate,
+Papas, Carne, Queso), se desea crear un sistema de pedidos que permita al usuario seleccionar el combo deseado, así como
+armar su propio pedido con las porciones adicionales, el sistema deberá informar sobre el pedido del usuario y el valor
+total del mismo.
+
+![decorator-4.png](./assets/decorator-4.png)
+
 ---
 
 # Patrones de comportamiento
