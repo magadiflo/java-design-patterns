@@ -531,6 +531,60 @@ que integrar código de distintos desarrolladores.
 
 ![adapter-4](./assets/adapter-4.png)
 
+## Decorator
+
+- **Añade dinámicamente un nuevo comportamiento a un objeto** en tiempo de ejecución envolviéndolo en un objeto de una
+  clase decoradora.
+- Mejora dinámicamente la funcionalidad de los objetos.
+- Añade responsabilidades adicionales a un objeto de forma dinámica.
+- Permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que
+  contienen estas funcionalidades.
+
+Estructura del patrón **Decorator**:
+
+![decorator-1.png](./assets/decorator-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+![decorator-2.png](./assets/decorator-2.png)
+
+1. **El componente** declara la interfaz común tanto para wrappers como para objetos envuetos.
+2. **Componente Concreto** es una clase de objetos envueltos. Define el comportamiento básico, que los decoradores
+   pueden alterar.
+3. La clase **Decoradora Base** tiene un campo para referenciar un objeto envuelto. El tipo del campo debe declararse
+   como la interfaz del componente para que pueda contener tanto los componentes concretos como los decoradores. La
+   clase decoradora base delega todas las operaciones al objeto envuelto.
+4. Los **Decoradores Concretos** definen funcionalidades adicionales que se pueden añadir dinámicamente a los
+   componentes. Los decoradores concretos sobreescriben métodos de la clase decoradora base y ejecutan su
+   comportamiento, ya sea antes o después de invocar al método padre.
+5. **El Cliente** puede envolver componentes en varias capas de decoradores, siempre y cuando trabajen con todos los
+   objetos a través de la interfaz del componente.
+
+### Ejemplo de Refactoring Guru
+
+![decorator-3.png](./assets/decorator-3.png)
+
+Este ejemplo muestra **cómo puedes ajustar el comportamiento de un objeto sin cambiar su código.**
+
+Inicialmente, la clase de la lógica de negocio solo podía leer y escribir datos en texto sin formato. Después **creamos
+varias pequeñas clases envoltorio que añaden un nuevo comportamiento** tras ejecutar operaciones estándar en un objeto
+envuelto.
+
+El **primer wrapper codifica y decodifica información**, y el **segundo comprime y descomprime datos.**
+
+Puedes incluso combinar estos wrappers envolviendo un decorador con otro.
+
+### [Ejemplo de Codejavu](http://codejavu.blogspot.com/2013/07/ejemplo-patron-de-diseno-decorator.html)
+
+**El problema**. Un restaurante de comidas rápidas ofrece 3 tipos de combos (Combo Básico, Combo Familiar, Combo
+Especial) cada combo tiene características diferentes en cuanto a cantidad, porciones, salsas entre otros, el
+restaurante también ofrece la posibilidad de aumentar el pedido mediante diferentes porciones adicionales (Tomate,
+Papas, Carne, Queso), se desea crear un sistema de pedidos que permita al usuario seleccionar el combo deseado, así como
+armar su propio pedido con las porciones adicionales, el sistema deberá informar sobre el pedido del usuario y el valor
+total del mismo.
+
+![decorator-4.png](./assets/decorator-4.png)
+
 ---
 
 # Patrones de comportamiento
