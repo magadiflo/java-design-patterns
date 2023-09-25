@@ -1,6 +1,6 @@
-package magadiflo.design.patterns.structural.decorator;
+package magadiflo.design.patterns.structural.decorator.guru;
 
-import magadiflo.design.patterns.structural.decorator.decorators.*;
+import magadiflo.design.patterns.structural.decorator.guru.decorators.*;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

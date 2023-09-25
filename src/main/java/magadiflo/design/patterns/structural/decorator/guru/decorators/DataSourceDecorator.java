@@ -1,4 +1,4 @@
-package magadiflo.design.patterns.structural.decorator.decorators;
+package magadiflo.design.patterns.structural.decorator.guru.decorators;
 
 public class DataSourceDecorator implements IDataSource {
     private IDataSource wrapper;
