@@ -679,3 +679,30 @@ o compresión de archivos.**
 El patrón Estrategia `proporciona una forma de definir una familia de algoritmos`, encapsular cada uno como un objeto y
 hacerlos intercambiables.
 
+## Template Method
+
+- **Define el esqueleto de un algoritmo en la superclase**, pero permite que las subclases sobreescriban pasos del
+  algoritmo sin cambiar su estructura.
+- El método de plantilla divide el algoritmo en pasos, permitiendo a las subclases sobreescribir estos pasos **pero no
+  el método de plantilla.**
+- Define un esqueleto común para un algoritmo y dejar los detalles de implementación para los hijos.
+- Con este patrón se define el esqueleto de un algoritmo en una clase abstracta, y se deja que sean las subclases
+  quienes proporcionen los detalles concretos de algunos o todos los pasos de ese algoritmo. Lo interesante de este
+  patrón es que también da la opción a las subclases de redefinir los pasos de acuerdo con sus necesidades, sin cambiar
+  la estructura del algoritmo.
+
+Estructura del patrón **Template Method:**
+
+![patrón template method](./assets/template-method-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+![patrón template method](./assets/template-method-2.png)
+
+1. La `clase abstracta` declara métodos que actúan como pasos de un algoritmo, así como el propio método plantilla que
+   invoca estos métodos en un orden específico. Los pasos pueden declararse `abstractos` o contar con una
+   implementación por defecto.
+2. Las `clases concretas` pueden sobreescribir todos los pasos, pero no el propio método plantilla.
+
+
+
