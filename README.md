@@ -684,7 +684,7 @@ hacerlos intercambiables.
 - **Define el esqueleto de un algoritmo en la superclase**, pero permite que las subclases sobreescriban pasos del
   algoritmo sin cambiar su estructura.
 - El método de plantilla divide el algoritmo en pasos, permitiendo a las subclases sobreescribir estos pasos **pero no
-  el método de plantilla.**
+  sobreescribir el método de plantilla.**
 - Define un esqueleto común para un algoritmo y dejar los detalles de implementación para los hijos.
 - Con este patrón se define el esqueleto de un algoritmo en una clase abstracta, y se deja que sean las subclases
   quienes proporcionen los detalles concretos de algunos o todos los pasos de ese algoritmo. Lo interesante de este
@@ -703,6 +703,10 @@ Aquí se muestra la estructura más detallada:
    invoca estos métodos en un orden específico. Los pasos pueden declararse `abstractos` o contar con una
    implementación por defecto.
 2. Las `clases concretas` pueden sobreescribir todos los pasos, pero no el propio método plantilla.
+
+
+
+
 
 
 
