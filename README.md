@@ -704,9 +704,25 @@ Aquí se muestra la estructura más detallada:
    implementación por defecto.
 2. Las `clases concretas` pueden sobreescribir todos los pasos, pero no el propio método plantilla.
 
+### [Ejemplo de Digital Ocean: "Algoritmo para construir una casa"](https://www.digitalocean.com/community/tutorials/template-method-design-pattern-in-java)
 
+**Patrón de diseño del Método de Plantilla**
 
+El método de plantilla define los pasos para ejecutar un algoritmo y puede proporcionar una implementación
+predeterminada que puede ser común para todas o algunas de las subclases. Entendamos este patrón con un ejemplo,
+supongamos que queremos proporcionar un algoritmo para construir una casa. Los pasos que se deben seguir para construir
+una casa son: construir los cimientos, construir los pilares, construir las paredes y las ventanas. El punto importante
+es que no podemos cambiar el orden de ejecución porque no podemos construir ventanas antes de construir los cimientos.
+Entonces, en este caso podemos crear un método de plantilla que utilizará diferentes métodos para construir la casa.
+Ahora bien, construir los cimientos de una casa es lo mismo para todo tipo de casas, ya sea una casa de madera o una de
+cristal. Entonces podemos proporcionar una implementación básica para esto, si las subclases quieren anular este método,
+pueden hacerlo, pero principalmente es común para todos los tipos de casas. `Para asegurarnos de que las subclases no
+anulen el método de plantilla, debemos hacerlo final.`
 
+**Clase abstracta del método de Plantilla**
 
+Como queremos que algunos de los métodos sean implementados por subclases, `tenemos que hacer que nuestra clase base sea
+una clase abstracta.`
 
+![template-method-3](./assets/template-method-3.png)
 
