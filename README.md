@@ -617,6 +617,15 @@ ineficiente biblioteca de integración de Youtube de un tercero.
 
 Proxy es muy valioso cuando tienes que añadir comportamientos a una clase cuyo código no puedes cambiar.
 
+### Ejemplo de Digital Ocean
+
+El patrón de diseño proxy se utiliza cuando queremos proporcionar un acceso controlado a una funcionalidad. Digamos que
+tenemos una clase que puede ejecutar algún comando en el sistema. Ahora bien, si la estamos utilizando, está bien, pero
+si queremos dar este programa a una aplicación cliente, puede tener graves problemas porque el programa cliente puede
+emitir comandos para eliminar algunos archivos del sistema o cambiar algunos ajustes que no queremos. Aquí una clase
+proxy puede ser creada para proveer acceso controlado al programa.
+
+
 ---
 
 # Patrones de comportamiento
