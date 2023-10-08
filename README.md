@@ -585,6 +585,31 @@ total del mismo.
 
 ![decorator-4.png](./assets/decorator-4.png)
 
+## Proxy
+
+- Proporciona un sustituto o marcador de posición para otro objeto con el fin de controlar el acceso a él.
+- Un proxy controla el acceso al objeto original, permitiéndole hacer algo antes o después de que la solicitud llegue al
+  objeto original.
+- Se basa en proporcionar un objeto que haga de intermediario (proxy) de otro, para controlar el acceso a él.
+
+Estructura del patrón **Proxy:**
+
+![patrón proxy](./assets/proxy-1.png)
+
+Aquí se muestra la estructura más detallada:
+
+![patrón proxy](./assets/proxy-2.png)
+
+1. La `Interfaz de Servicio` declara la interfaz del Servicio. El proxy debe seguir esta interfaz para poder camuflarse
+   como objeto de servicio.
+2. `Servicio` es una clase que proporciona una lógica de negocio útil.
+3. La clase `Proxy` tiene un campo de referencia que apunta a un objeto de servicio. Cuando el proxy finaliza su
+   procesamiento (por ejemplo, inicialización diferida, registro, control de acceso, almacenamiento en caché, etc.),
+   pasa la solicitud al objeto de servicio. Normalmente, los proxies gestionan el ciclo de vida completo de sus objetos
+   de servicio.
+4. El `Cliente` debe funcionar con servicios y proxies a través de la misma interfaz. De este modo, puedes pasar un
+   proxy a cualquier código que espere un objeto de servicio.
+
 ---
 
 # Patrones de comportamiento
