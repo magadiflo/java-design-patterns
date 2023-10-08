@@ -610,6 +610,13 @@ Aquí se muestra la estructura más detallada:
 4. El `Cliente` debe funcionar con servicios y proxies a través de la misma interfaz. De este modo, puedes pasar un
    proxy a cualquier código que espere un objeto de servicio.
 
+### Ejemplo de Refactoring Guru: "Proxy de caché"
+
+En este ejemplo, el `patrón Proxy` ayuda a implementar la inicialización diferida y el almacenamiento en caché a una
+ineficiente biblioteca de integración de Youtube de un tercero.
+
+Proxy es muy valioso cuando tienes que añadir comportamientos a una clase cuyo código no puedes cambiar.
+
 ---
 
 # Patrones de comportamiento
