@@ -625,6 +625,44 @@ si queremos dar este programa a una aplicación cliente, puede tener graves prob
 emitir comandos para eliminar algunos archivos del sistema o cambiar algunos ajustes que no queremos. Aquí una clase
 proxy puede ser creada para proveer acceso controlado al programa.
 
+## Facade
+
+- **Proporciona una interfaz simplificada** a una biblioteca, un framework o cualquier otro grupo complejo de clases.
+- Proporciona una interfaz unificada para un conjunto de interfaces de un subsistema. Define una interfaz de alto nivel
+  que hace que el subsistema sea más fácil de usar.
+- Nos permite acceder a un subsistema de forma más sencilla.
+
+Estructura del patrón **Facade**:
+
+![facade-1](./assets/facade-1.png)
+
+1. El patrón `facade` proporciona un práctico acceso a una parte específica de la funcionalidad del subsistema. Sabe a
+   dónde dirigir la petición del cliente y cómo operar todas las partes móviles.
+2. Puede crearse una clase `fachada adicional` para evitar contaminar una única fachada con funciones no relacionadas
+   que podrían convertirla en otra estructura compleja. Las fachadas adicionales pueden utilizarse por clientes y por
+   otras fachadas.
+3. El `subsistema complejo` consiste en decenas de objetos diversos. Para lograr que todos hagan algo significativo,
+   debes profundizar en los detalles de implementación del subsistema, que pueden incluir inicializar objetos en el
+   orden correcto y suministrarles datos en el formato adecuado. Las clases del subsistema no conocen la existencia de
+   la fachada. Operan dentro del sistema y trabajan entre sí directamente.
+4. El `cliente` utiliza la fachada en lugar de invocar directamente los objetos del subsistema.
+
+### Ejemplo de Refactoring Guru: "Interfaz simple para una biblioteca compleja de conversión de video"
+
+En este ejemplo, el patrón Facade simplifica la comunicación con un framework complejo de conversión de video.
+
+El patrón Facade proporciona una única clase con un único método que gestiona toda la complejidad de configurar las
+clases correctas del framework y recuperar el resultado en el formato correcto.
+
+### Ejemplo de Digital Ocean
+
+Supongamos que tenemos una aplicación con un conjunto de interfaces para utilizar bases de datos MySql/Oracle y generar
+diferentes tipos de informes, como informes HTML, informes PDF, etc. Así que tendremos diferentes conjuntos de
+interfaces para trabajar con diferentes tipos de bases de datos. Ahora una aplicación cliente puede utilizar estas
+interfaces para obtener la conexión de base de datos requerida y generar informes. Pero cuando la complejidad aumenta o
+los nombres de comportamiento de la interfaz son confusos, la aplicación cliente tendrá dificultades para gestionarlo.
+Así que podemos aplicar el patrón de diseño Facade aquí y proporcionar una interfaz de envoltura en la parte superior de
+la interfaz existente para ayudar a la aplicación cliente.
 
 ---
 
