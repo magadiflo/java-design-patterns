@@ -625,6 +625,12 @@ si queremos dar este programa a una aplicación cliente, puede tener graves prob
 emitir comandos para eliminar algunos archivos del sistema o cambiar algunos ajustes que no queremos. Aquí una clase
 proxy puede ser creada para proveer acceso controlado al programa.
 
+## Facade
+
+- **Proporciona una interfaz simplificada** a una biblioteca, un framework o cualquier otro grupo complejo de clases.
+- Proporciona una interfaz unificada para un conjunto de interfaces de un subsistema. Define una interfaz de alto nivel
+  que hace que el subsistema sea más fácil de usar.
+- Nos permite acceder a un subsistema de forma más sencilla.
 
 ---
 
