@@ -632,6 +632,21 @@ proxy puede ser creada para proveer acceso controlado al programa.
   que hace que el subsistema sea más fácil de usar.
 - Nos permite acceder a un subsistema de forma más sencilla.
 
+Estructura del patrón **Facade**:
+
+![facade-1](./assets/facade-1.png)
+
+1. El patrón `facade` proporciona un práctico acceso a una parte específica de la funcionalidad del subsistema. Sabe a
+   dónde dirigir la petición del cliente y cómo operar todas las partes móviles.
+2. Puede crearse una clase `fachada adicional` para evitar contaminar una única fachada con funciones no relacionadas
+   que podrían convertirla en otra estructura compleja. Las fachadas adicionales pueden utilizarse por clientes y por
+   otras fachadas.
+3. El `subsistema complejo` consiste en decenas de objetos diversos. Para lograr que todos hagan algo significativo,
+   debes profundizar en los detalles de implementación del subsistema, que pueden incluir inicializar objetos en el
+   orden correcto y suministrarles datos en el formato adecuado. Las clases del subsistema no conocen la existencia de
+   la fachada. Operan dentro del sistema y trabajan entre sí directamente.
+4. El `cliente` utiliza la fachada en lugar de invocar directamente los objetos del subsistema.
+
 ---
 
 # Patrones de comportamiento
