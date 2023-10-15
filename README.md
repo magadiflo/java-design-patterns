@@ -654,6 +654,16 @@ En este ejemplo, el patrón Facade simplifica la comunicación con un framework 
 El patrón Facade proporciona una única clase con un único método que gestiona toda la complejidad de configurar las
 clases correctas del framework y recuperar el resultado en el formato correcto.
 
+### Ejemplo de Digital Ocean
+
+Supongamos que tenemos una aplicación con un conjunto de interfaces para utilizar bases de datos MySql/Oracle y generar
+diferentes tipos de informes, como informes HTML, informes PDF, etc. Así que tendremos diferentes conjuntos de
+interfaces para trabajar con diferentes tipos de bases de datos. Ahora una aplicación cliente puede utilizar estas
+interfaces para obtener la conexión de base de datos requerida y generar informes. Pero cuando la complejidad aumenta o
+los nombres de comportamiento de la interfaz son confusos, la aplicación cliente tendrá dificultades para gestionarlo.
+Así que podemos aplicar el patrón de diseño Facade aquí y proporcionar una interfaz de envoltura en la parte superior de
+la interfaz existente para ayudar a la aplicación cliente.
+
 ---
 
 # Patrones de comportamiento
