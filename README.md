@@ -647,6 +647,13 @@ Estructura del patrón **Facade**:
    la fachada. Operan dentro del sistema y trabajan entre sí directamente.
 4. El `cliente` utiliza la fachada en lugar de invocar directamente los objetos del subsistema.
 
+### Ejemplo de Refactoring Guru: "Interfaz simple para una biblioteca compleja de conversión de video"
+
+En este ejemplo, el patrón Facade simplifica la comunicación con un framework complejo de conversión de video.
+
+El patrón Facade proporciona una única clase con un único método que gestiona toda la complejidad de configurar las
+clases correctas del framework y recuperar el resultado en el formato correcto.
+
 ---
 
 # Patrones de comportamiento
