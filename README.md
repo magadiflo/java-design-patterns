@@ -314,6 +314,14 @@ A continuación se muestra la estructura del patrón **Singleton**:
    clase. El constructor del Singleton debe ocultarse del código cliente. La llamada al método `obtenerInstancia` debe
    ser la única manera de obtener el objeto Singleton.
 
+### [Singleton en Java, todos los escenarios](https://javatechonline.com/singleton-design-pattern-in-java-with-all-scenarios/)
+
+En el diagrama anterior mostramos la estructura general del patrón `Singleton`, pero en el mundo real nos encontraremos
+con escenarios donde se requiera una implementación particular en función a dichos escenarios. Veamos cuáles son:
+
+- Inicialización Ansiosa
+
+
 ## Factory Method
 
 Define una interfaz para crear un objeto, pero deja que las subclases decidan qué clase instanciar.
