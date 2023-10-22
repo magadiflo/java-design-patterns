@@ -321,6 +321,7 @@ con escenarios donde se requiera una implementación particular en función a di
 
 - Inicialización Ansiosa
 - Bill Pugh (Inner Class)
+- MultiThread
 
 ## Factory Method
 
