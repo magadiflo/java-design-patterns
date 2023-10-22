@@ -324,6 +324,7 @@ con escenarios donde se requiera una implementación particular en función a di
 - MultiThread
 - Violation
     - Clonation
+    - Reflection
 
 ## Factory Method
 
