@@ -301,6 +301,31 @@ definición de clase **"externa (outer)"**:
 
 ---
 
+## Singleton
+
+- Permite asegurarnos de que **la clase tenga una única instancia** a la vez que proporciona un punto de acceso global a
+  dicha distancia.
+
+A continuación se muestra la estructura del patrón **Singleton**:
+
+![singleton-1](./assets/singleton-1.png)
+
+1. La clase `Singleton` declara el método estático `obtenerInstancia` que devuelve la misma instancia de su propia
+   clase. El constructor del Singleton debe ocultarse del código cliente. La llamada al método `obtenerInstancia` debe
+   ser la única manera de obtener el objeto Singleton.
+
+### [Singleton en Java, todos los escenarios](https://javatechonline.com/singleton-design-pattern-in-java-with-all-scenarios/)
+
+En el diagrama anterior mostramos la estructura general del patrón `Singleton`, pero en el mundo real nos encontraremos
+con escenarios donde se requiera una implementación particular en función a dichos escenarios. Veamos cuáles son:
+
+- Inicialización Ansiosa
+- Bill Pugh (Inner Class)
+- MultiThread
+- Violation
+    - Clonation
+    - Reflection
+
 ## Factory Method
 
 Define una interfaz para crear un objeto, pero deja que las subclases decidan qué clase instanciar.
