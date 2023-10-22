@@ -320,7 +320,7 @@ En el diagrama anterior mostramos la estructura general del patrón `Singleton`,
 con escenarios donde se requiera una implementación particular en función a dichos escenarios. Veamos cuáles son:
 
 - Inicialización Ansiosa
-
+- Bill Pugh (Inner Class)
 
 ## Factory Method
 
