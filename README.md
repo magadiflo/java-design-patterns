@@ -761,19 +761,6 @@ su diagrama de clases:
 
 ![strategy](./assets/strategy-3.png)
 
-**NOTA**
-
-> Tenga en cuenta que el **método de pago del carrito de compras requiere un algoritmo de pago** `como argumento` y `no
-> lo almacena en ningún lugar como variable de instancia.`
->
-> Podríamos haber usado la composición para crear `variables de instancia` para estrategias, pero `deberíamos evitarlo`
-> ya que queremos que la estrategia específica se aplique a una tarea particular.
->
-> El patrón de estrategia es muy similar al patrón de estado. Una de las diferencias es que el contexto contiene el
-> estado como variable de instancia y puede haber múltiples tareas cuya implementación puede depender del estado,
-> mientras que `en el patrón de estrategia la estrategia se pasa como argumento al método y el objeto de contexto
-> no tiene ninguna variable para almacenarlo.`
-
 ### [Ejemplo de DZone: "Formatos de compresión de archivos"](https://dzone.com/articles/design-patterns-strategy)
 
 El patrón Estrategia `se debe utilizar donde desee elegir el algoritmo que se utilizará en tiempo de ejecución`. Un buen
