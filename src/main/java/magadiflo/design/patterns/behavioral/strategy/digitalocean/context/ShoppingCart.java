@@ -27,10 +27,6 @@ public class ShoppingCart {
         return this.items.stream().mapToInt(Item::getPrice).sum();
     }
 
-    /**
-     * Tenga en cuenta que el método de pago del carrito de compras requiere un algoritmo de pago como argumento
-     * y no lo almacena en ningún lugar como variable de instancia.
-     */
     public void pay(IPaymentStrategy paymentMethod) {
         paymentMethod.pay(this.calculateTotal());
     }
